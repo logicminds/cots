@@ -1,0 +1,11 @@
+# https://docs.puppet.com/puppet/4.8/reference/lookup_quick.html
+---
+version: 4
+datadir: data
+hierarchy:
+  - name: "applications"
+    backend: yaml
+    path: "applications/%{application_name}"
+  - name: "common"
+    backend: yaml
+    path: "common"

@@ -1,0 +1,5 @@
+cots::app_metadata:
+  name: developer
+  dependencies: ['winzip', '7zip', 'atom']
+  description: 'Group for Development Applications'
+  entry_type: group

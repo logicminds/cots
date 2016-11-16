@@ -1,0 +1,9 @@
+fixtures:
+    symlinks:
+      cots: "#{source_dir}"
+    repositories:
+      debug: 'https://github.com/nwops/puppet-debug'
+      stdlib:
+        repo: https://github.com/puppetlabs/puppetlabs-stdlib.git
+        ref: 4.3.2
+    forge_modules:

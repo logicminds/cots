@@ -1,0 +1,7 @@
+cots::app_metadata:
+  name: 7zip
+  dependencies: []
+  description: 'Unzip utility'
+  installer_location: http://www.7-zip.org/a/7z1604-x64.exe
+  installer_provider: 'windows'
+  entry_type: item

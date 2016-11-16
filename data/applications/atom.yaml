@@ -1,0 +1,7 @@
+cots::app_metadata:
+  name: atom
+  dependencies: []
+  description: 'Code Editor'
+  installer_location: https://github.com/atom/atom/releases/download/v1.12.3/atom-windows.zip
+  installer_provider: 'windows'
+  entry_type: item

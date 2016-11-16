@@ -1,0 +1,26 @@
+cots::app_metadata:
+  name: winzip
+  dependencies: []
+  description: 'Unzip utility'
+  installer_location: http://download.winzip.com/gl/nkln/winzip21.exe
+  installer_provider: 'windows'
+  entry_type: item
+
+
+# installer_provider:
+#   type: string
+#   values:
+#     - windows
+#     - msi
+#     - yum
+#     - rpm
+#     - iim
+#     - chocolatey
+#     - tar
+#     - gzip
+#
+# entry_type:
+#   type: string
+#   values:
+#     - item
+#     - group
