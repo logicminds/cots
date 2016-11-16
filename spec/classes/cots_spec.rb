@@ -21,7 +21,7 @@ describe 'cots' do
   # while all required parameters will require you to add a value
   let(:params) do
     {
-      :requested_apps => ['winzip'],
+      :requested_apps => ['developer'],
 
     }
   end
@@ -33,7 +33,40 @@ describe 'cots' do
     Puppet::Util::Log.newdestination(:console)
     is_expected.to contain_cots__application("winzip")
         .with({
+            :entry_type => 'item',
+            :installer_location => 'http://download.winzip.com/gl/nkln/winzip21.exe',
+            :installer_provider => 'windows',
+            :description => 'Unzip utility',
+            :dependencies => [],
+            :package_name => 'winzip',
+          })
+  end
 
+  it do
+    Puppet::Util::Log.level = :debug
+    Puppet::Util::Log.newdestination(:console)
+    is_expected.to contain_cots__application("7zip")
+        .with({
+            :entry_type => 'item',
+            :installer_location => 'http://www.7-zip.org/a/7z1604-x64.exe',
+            :installer_provider => 'windows',
+            :description => 'Unzip utility',
+            :dependencies => [],
+            :package_name => '7zip',
+          })
+  end
+
+  it do
+    Puppet::Util::Log.level = :debug
+    Puppet::Util::Log.newdestination(:console)
+    is_expected.to contain_cots__application("atom")
+        .with({
+            :entry_type => 'item',
+            :installer_location => 'https://github.com/atom/atom/releases/download/v1.12.3/atom-windows.zip',
+            :installer_provider => 'windows',
+            :description => 'Code Editor',
+            :dependencies => ['7zip'],
+            :package_name => 'atom',
           })
   end
 

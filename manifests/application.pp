@@ -8,6 +8,10 @@ define cots::application(
  ) {
 
    if $entry_type == 'item' {
-     
+     package{$package_name:
+       ensure => present,
+       provider => $installer_provider,
+       source   => $installer_location,
+     }
    }
  }
