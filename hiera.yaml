@@ -5,7 +5,7 @@ datadir: data
 hierarchy:
   - name: "applications"
     backend: yaml
-    path: "applications/%{application_name}"
+    path: "applications/%{app_name}"
   - name: "common"
     backend: yaml
     path: "common"
